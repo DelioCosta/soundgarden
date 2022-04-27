@@ -26,10 +26,8 @@ formSelector.addEventListener('submit', (event) => {
     }).then( response => console.log(response)
     ).then( ()=> {
         alert("Evento criado com sucesso!")
-
-        setTimeout(function(){
-            window.location.href = "/soundgarden/admin.html";
-        }, 1000);
-    }).catch( error => console.error(error) );
+        window.location.replace("admin.html");
+        }
+    ).catch( error => console.error(error) );
 
 });
