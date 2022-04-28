@@ -22,21 +22,22 @@ function createElementFromEvent(data){
         const fourthTdElement = document.createElement('td');
 
         const firstAnchor = document.createElement('a');
-        firstAnchor.innerText = "ver reservas"
-        firstAnchor.classList.add('btn')
-        firstAnchor.classList.add('btn-dark')
+        firstAnchor.innerText = "ver reservas";
+        firstAnchor.href = "reservas-evento.html?id=" + event._id;
+        firstAnchor.classList.add('btn');
+        firstAnchor.classList.add('btn-dark');
 
         const secondAnchor = document.createElement('a');
-        secondAnchor.innerText = "editar"
+        secondAnchor.innerText = "editar";
         secondAnchor.href = "editar-evento.html?id=" + event._id;
-        secondAnchor.classList.add('btn')
-        secondAnchor.classList.add('btn-secondary')
+        secondAnchor.classList.add('btn');
+        secondAnchor.classList.add('btn-secondary');
 
         const thirdAnchor = document.createElement('a');
-        thirdAnchor.innerText = "excluir"
+        thirdAnchor.innerText = "excluir";
         thirdAnchor.href = "excluir-evento.html?id=" + event._id;
-        thirdAnchor.classList.add('btn')
-        thirdAnchor.classList.add('btn-danger')
+        thirdAnchor.classList.add('btn');
+        thirdAnchor.classList.add('btn-danger');
 
 
 

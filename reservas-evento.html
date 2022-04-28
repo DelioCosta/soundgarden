@@ -57,26 +57,23 @@
         </aside>
         <main class="col-9 p-5">
           <div class="my-5">
-            <h1>Gerenciamento de eventos</h1>
-
-            <a href="cadastro-evento.html" class="btn btn-primary"
-              >Novo Evento</a
-            >
+            <h1>
+              Gerenciamento de reservas:
+              <span id="eventoNome">Evento nome</span>
+            </h1>
           </div>
-          <div class="bd-example">
-            <table class="table">
+          <div class="table-responsive">
+            <table class="table table-striped">
               <thead>
                 <tr>
                   <th scope="col">#</th>
                   <th scope="col">Data</th>
-                  <th scope="col">Titulo</th>
-                  <th scope="col">Atrações</th>
-                  <th scope="col">Ações</th>
+                  <th scope="col">Nome</th>
+                  <th scope="col">Email</th>
+                  <th scope="col">Quantidade</th>
                 </tr>
               </thead>
-              <tbody id="tableBody">
-                
-              </tbody>
+              <tbody></tbody>
             </table>
           </div>
         </main>
@@ -88,6 +85,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="js/geral.js"></script>
-    <script src="js/admin.js"></script>
+    <script src="js/reservas-evento.js"></script>
   </body>
 </html>
