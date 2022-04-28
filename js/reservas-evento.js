@@ -41,12 +41,7 @@ const main = async () => {
       tbody.appendChild(trNenhumaReserva);
     }
   
-    // document.querySelector("#eventoNome").innerHTML = data[0]?.event.name;
-  
     dataBookings.forEach((row, index) => {
-      // if (index === 0) {
-      //   document.querySelector("#eventoNome").innerHTML = row.event.name;
-      // }
   
       const tr = document.createElement("tr");
       tr.innerHTML = `
