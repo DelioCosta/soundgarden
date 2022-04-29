@@ -1,6 +1,38 @@
 const eventsContainer = document.querySelector('#events-container');
 
-function createElementFromEvent(data){
+function enviarReserva(event){
+    event.preventDefault();
+    const id = event.target.dataset.id;
+    const nameSelector = document.querySelector('#nome');
+    const emailSelector = document.querySelector('#email');
+    const numberTicketsSelector = document.querySelector('#number_tickets');
+    const modalReserva = document.getElementById("modalReserva");
+    const modalReservaObj = new bootstrap.Modal(modalReserva);
+    
+    const body = {
+        owner_name: nameSelector.value,
+        owner_email: emailSelector.value,
+        number_tickets: numberTicketsSelector.value,
+        event_id: id
+    }
+
+    fetch('https://xp41-soundgarden-api.herokuapp.com/bookings', {
+                method: "POST", 
+                headers: {
+                    Accept: "application/json",
+                    "Content-Type": "application/json"},
+                body: JSON.stringify(body)
+                })
+                .then((response) => {
+                    //console.log(response);
+                    alert("Reserva feita com sucesso");
+
+                    modalReservaObj.hide();
+                })
+                .catch((error) => console.log(error.message));
+}
+
+function createElementFromEvent(data) {
     data.forEach((event) => {
         // cria o article
         const article = document.createElement('article');
@@ -26,6 +58,13 @@ function createElementFromEvent(data){
         linkButton.classList.add('btn');
         linkButton.classList.add('btn-primary');
         linkButton.innerText = 'reservar ingresso';
+        linkButton.setAttribute('data-bs-toggle', "modal");
+        linkButton.setAttribute('data-bs-target', "#modalReserva");
+        linkButton.setAttribute('data-id', event._id);
+        linkButton.setAttribute('data-name', Name);
+        linkButton.addEventListener("click", (event) => {
+            criarModal(event)
+        });
 
         // insere os elementos no card
 
@@ -39,6 +78,18 @@ function createElementFromEvent(data){
         // insere o card no container
         eventsContainer.append(article);
     })
+
+    function criarModal(evento) {
+        const button = evento.target;
+
+        document.querySelector("#title").innerText = button.dataset.name;
+        
+        const botaoConfirmar = document.querySelector('#confirmar');
+        botaoConfirmar.setAttribute('data-id', button.dataset.id);
+        botaoConfirmar.addEventListener('click', (event) => {
+            enviarReserva(event)
+        });      
+    };
 };
 
 
