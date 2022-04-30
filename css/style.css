@@ -54,7 +54,6 @@ footer nav ul li  {
     width: 100%;
     height: 500px;
     overflow: hidden;
-    box-shadow: 20px 6px 6px 6px rgba(0, 0, 0, 0.129);
   }
   
   .slides{
@@ -155,4 +154,63 @@ footer nav ul li  {
   #radio4:checked ~ .navigation-auto .auto-btn4{
     background: #40D3DC;
   }
-        
+
+  .nav-logo {
+    width: 300px;
+  }
+  .musica-pessoas {
+    width: 500px;
+  }
+  .black-logo {
+    width: 200px;
+  }
+
+  #eventos {
+    flex-wrap: wrap;
+  }
+
+  .btn-secondary{
+    margin: 0 0 30px 0;
+  }
+  
+  .align-items-center{
+    flex-wrap: wrap;
+  }
+
+  .row {
+    margin: 20px 0 0 0;
+  }
+
+  li a {
+    text-decoration: none;
+    color: black;
+  }
+
+  @media only screen and (max-width: 1000px) {
+    .row {
+      display: flex;
+      flex: wrap;
+      flex-direction: column;
+    }
+    .musica-pessoas {
+      margin: 0 0 20px 0;
+    }
+  }
+  @media only screen and (max-width: 570px) {
+    .musica-pessoas {
+      width: 313px;
+    }
+    
+    .col{
+      width: auto; 
+    }
+    .nav-logo {
+      width: 250px;
+  }
+  }
+  @media only screen and (max-width: 355px) {
+    .musica-pessoas {
+      width: 232px;
+    }
+  }
+

@@ -16,7 +16,7 @@
 
   <body>
     <header class="d-flex justify-content-center align-items-center">
-      <img src="img/Sound-logo (1).png" width="300" alt="" />
+      <img class ="nav-logo" src="img/Sound-logo (1).png" width="300" alt="" />
     </header>
     <main>
       <section
@@ -114,7 +114,7 @@
               </p>
             </div>
             <div class="col">
-              <img src="img/music.svg" width="500px" />
+              <img class="musica-pessoas" src="img/music.svg" />
             </div>
           </div>
         </div>
@@ -123,7 +123,7 @@
     <footer>
       <div class="container d-flex justify-content-center align-items-center">
         <a href="#">
-          <img src="img/Sound-logo-black (1).png" width="200px" alt="" />
+          <img class="black-logo" src="img/Sound-logo-black (1).png" alt="" />
         </a>
         <nav>
           <ul>
@@ -138,35 +138,73 @@
       </div>
     </footer>
 
-    <div class="modal fade" id="modalReserva" tabindex="-1" aria-labelledby="modal de reserva" aria-hidden="true">
+    <div
+      class="modal fade"
+      id="modalReserva"
+      tabindex="-1"
+      aria-labelledby="modal de reserva"
+      aria-hidden="true"
+    >
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="title">Título do evento</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
           </div>
           <div class="modal-body">
             <form id="reserva" class="col-12">
-              <input type="hidden" name="event_id" id="id" value="">
+              <input type="hidden" name="event_id" id="id" value="" />
+              <!-- <input type="hidden" name="number_tickets" value="1" /> -->
               <div class="mb-3">
                 <label for="nome" class="form-label">Nome</label>
-                <input type="text" class="form-control" id="nome" required
-                  aria-describedby="nome" name="owner_name">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nome"
+                  required
+                  aria-describedby="nome"
+                  name="owner_name"
+                />
               </div>
               <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" required aria-describedby="email" name="owner_email">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  required
+                  aria-describedby="email"
+                  name="owner_email"
+                />
               </div>
               <div class="mb-3">
                 <label for="number_tickets" class="form-label">Número de ingressos</label>
-                <input type="number" class="form-control" id="number_tickets" required 
-                       aria-describedby="number_tickets" name="owner_number_tickets">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="number_tickets"
+                  required
+                  aria-describedby="number_tickets"
+                  name="owner_number_tickets"
+                />
               </div>
             </form>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"> Cancelar </button>
-            <button type="submit" class="btn btn-primary" form="reserva">  Confirmar </button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            > Cancelar </button>
+
+            <button type="submit" class="btn btn-primary" form="reserva"
+            >  Confirmar </button>
+            
           </div>
         </div>
       </div>
